@@ -43,3 +43,7 @@ Now you must change Robot Steering topic to :
 
 You could go to another terminal, and see topic list (after sourcing setup.bash) :
 rostopic list
+
+Resources : 
+
+https://automaticaddison.com/how-to-build-a-simulated-mobile-manipulator-using-ros/?fbclid=IwAR3K5lET6mD-uIjI4N_832OBdfDKRjYWYyrmm31dZ0ChFQkJFEeGJrraR3M
