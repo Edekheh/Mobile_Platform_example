@@ -9,10 +9,10 @@
 2. Ros Noetic, follow this [link](http://wiki.ros.org/noetic/Installation/Ubuntu)  or guide below : 
   ```sh
   sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-  sudo apt install curl
+  sudo apt install curl -y
   curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
   sudo apt update
-  sudo apt install ros-noetic-desktop-full
+  sudo apt install ros-noetic-desktop-full -y
   ```
   Now you can source your ROS setup file by typing : 
   ``` sh
@@ -20,11 +20,11 @@
   ```
   3. Additional dependencies : 
   ``` sh
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-sudo apt install python3-rosdep
-sudo apt-get install ros-noetic-ros-control
-sudo apt-get install ros-noetic-ros-controllers
-sudo apt-get install ros-noetic-gazebo-ros-control
+sudo apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install -y python3-rosdep
+sudo apt-get install -y ros-noetic-ros-control
+sudo apt-get install -y ros-noetic-ros-controllers
+sudo apt-get install -y ros-noetic-gazebo-ros-control
   ```
   Now you can init your rosdep : 
   ``` sh
@@ -57,7 +57,7 @@ rostopic list
 
   2.  To start playing with mobile platform only you can use (every command in separate window or terminal): 
   ``` sh
-roslaunch mobile_manipulator_body arm_gazebo_control.launchrosrun rqt_robot_steering 
+roslaunch mobile_manipulator_body arm_gazebo_control.launch
 rostopic list
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory '{joint_names: ["arm_base_joint","shoulder_joint", "bottom_wrist_joint", "elbow_joint","top_wrist_joint"], points: [{positions: [-0.1, 0.5, 0.02, 0, 0], time_from_start: [1,0]}]}' -1
   ```
